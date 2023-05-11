@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQRT THE BEST</title>
+</head>
+<body>
+    <form style="text-align: center" action="{% url 'home' %}" method="post">
+        {% csrf_token %}
+        <h1>Извлечение квадратного корня SQRT ооо да</h1>
+        <h2>Ваше число</h2>
+        {{form.calc_num}}
+        <p><button type="submit">Вычислить</button>
+        <h2>Результат</h2>
+        <h3>{{ result}}</h3>
+        <h2>Наши контакты </h2>
+        <h2>brigada@mail.ru</h2>
+    </form>
+</body>
+</html>
