@@ -1,0 +1,109 @@
+:root {
+  --white: rgba(255,255,255,0.3);
+  --index: calc(1vw+1vh);
+}
+
+@font-face {
+  font-family: cormorant-h;
+  src: url(/fonts/Cormorant-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: raleway-g;
+  src: url(/fonts/Raleway-VariableFont_wght.ttf);
+}
+
+body {
+  background: linear-gradient(-45deg, #212529, #292E33, #72818F);
+  background-size: 400% 400%;
+  animation: gradient-bg 15s ease infinite;
+  font-family: raleway-g;
+}
+
+.form-group label {
+  font-size: calc(var(--index) * 1.35);
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  text-align: right;
+}
+
+.form-group input {
+  background: transparent;
+  padding: 1em;
+  border: none;
+  margin-bottom: 10;
+  border-left: 1px solid var(--white);
+  border-top: 1px solid var(--white);
+  border-radius: 5000px;
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.form-group input:focus{
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 0, 0, 0.6);
+  outline: 0 none;
+}
+
+.white-transparent-form {
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 20px;
+  border-left: 1px solid var(--white);
+  border-top: 1px solid var(--white);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.calc-btn {
+  background: transparent;
+  padding: 1em;
+  border: none;
+  border-left: 1px solid var(--white);
+  border-top: 1px solid var(--white);
+  border-radius: 5000px;
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.headers-font {
+  font-family: cormorant-h;
+  font-size: calc(var(--index) * 1.35);
+}
+
+.result span {
+  font-weight: bold;
+}
+
+.result {
+  color: fff;
+}
+
+.label-contacts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+  color: #fff;
+  font-size: calc(var(--index) * 2);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+@keyframes gradient-bg {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

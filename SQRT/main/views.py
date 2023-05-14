@@ -9,17 +9,20 @@ def findSQRT(num):
         num= num.replace('i','j')
         v=complex(num)
         v=v**0.5
+        
         if v.imag == 0j:
-           return v.real
+            return "√"+str(num)+" = "+str(v.real)
         else:
-            return v    
+            return  "√"+str(num)+" = "+str(v)
     except:
-        return "xз"
+        return "Введите корректное число!"
 def index(request):
     if request.method == "POST":
         form= CalcForm(request.POST)
         res=findSQRT(request.POST.get('calc_num'))
     else:
         form = CalcForm()
-        res="Здесь будет результат"
+        res=""
     return render(request, 'main/index.html', {'form': form, 'result':res })
+def help(request):
+    return render(request, 'main/help.html')
