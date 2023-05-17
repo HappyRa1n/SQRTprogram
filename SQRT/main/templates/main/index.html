@@ -24,10 +24,10 @@
           </table>
           <ul class="navbar-nav headers-font">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Главная</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}" id="headerMainChangeText"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'help' %}">Поддержка</a>
+              <a class="nav-link" href="{% url 'help' %}" id="headerSupportChangeText"></a>
             </li>
           </ul>
         </div>
@@ -39,11 +39,11 @@
           <form action="{% url 'home' %}" method="post">
                 <div class="form-group">
                   {% csrf_token %}
-                  <label for="number-input">Введите число: </label>
+                  <label for="number-input" id="inputNumberChangeText"></label>
                   <br>
                   {{form.calc_num}}
                 </div>
-                <button type="submit" class="calc-btn">Вычислить</button>
+                <button type="submit" class="calc-btn" id="calcBtnChangeText">Вычислить</button>
                 <div class="result mt-4" id="result">{{result}}</div>
           </form>
           <div class="result mt-4" id="result"></div>
